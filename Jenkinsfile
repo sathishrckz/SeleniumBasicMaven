@@ -6,7 +6,7 @@ agent any
 
         stage ('Compile stage'){
             steps{
-                 withMaven(maven : 'maven_3_5_0'){
+                 withMaven(maven : 'maven_3_8_4'){
                 sh 'mvn clean compile'
 
                   }
@@ -15,7 +15,7 @@ agent any
 
         stage ('Testing stage'){
                     steps{
-                         withMaven(maven : 'maven_3_5_0'){
+                         withMaven(maven : 'maven_3_8_4'){
                         sh 'mvn test'
 
                           }
@@ -23,7 +23,7 @@ agent any
         }
          stage ('Deployment stage'){
                             steps{
-                                 withMaven(maven : 'maven_3_5_0'){
+                                 withMaven(maven : 'maven_3_8_4'){
                                 sh 'mvn deploy'
 
                                   }
